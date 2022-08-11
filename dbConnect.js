@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-mongoose.connect(process.env.REACT_APP_BASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://kevinkupervaser:martinembon1992@cluster0.2ltvv.mongodb.net/money-tracker-app",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const connection = mongoose.connection;
 
