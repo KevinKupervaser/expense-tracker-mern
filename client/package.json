@@ -2,6 +2,7 @@
   "name": "expense-tracker-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "engines": {
     "node": "v18.1.0",
     "npm": "8.8.0"
