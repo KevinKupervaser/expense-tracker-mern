@@ -5,6 +5,7 @@ app.use(express.json());
 const path = require("path");
 const userRoute = require("./routes/usersRoute");
 const transactionRoutes = require("./routes/transactionsRoute");
+require("dotenv").config();
 
 app.use("/api/users/", userRoute);
 app.use("/api/transactions/", transactionRoutes);
