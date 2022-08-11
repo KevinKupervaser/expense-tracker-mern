@@ -1,7 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
     "node": "v18.1.0",
     "npm": "8.8.0"
