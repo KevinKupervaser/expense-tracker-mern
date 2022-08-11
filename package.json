@@ -7,7 +7,7 @@
     "npm": "8.8.0"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node server.js",
     "client-install": "npm install --prefix client",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
