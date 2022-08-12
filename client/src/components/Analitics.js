@@ -98,14 +98,14 @@ const Analitics = ({ transactions }) => {
         <div className='col-md-6'>
           <div className='category-analysis'>
             <h4>Ingresos</h4>
-            {categories.map((category) => {
+            {categories.map((category, index) => {
               const amount = transactions
                 .filter((t) => t.type === "income" && t.category === category)
                 .reduce((acc, t) => acc + t.amount, 0);
               return (
                 amount > 0 && (
                   <div className='category-card'>
-                    <h5>{category}</h5>
+                    <h5 key={index}>{category}</h5>
                     <Progress
                       strokeColor={"#5DD64F"}
                       percent={((amount / totalIncomeTurnover) * 100).toFixed(
@@ -122,14 +122,14 @@ const Analitics = ({ transactions }) => {
         <div className='col-md-6'>
           <div className='category-analysis'>
             <h4>Egresos</h4>
-            {categories.map((category) => {
+            {categories.map((category, index) => {
               const amount = transactions
                 .filter((t) => t.type === "expense" && t.category === category)
                 .reduce((acc, t) => acc + t.amount, 0);
               return (
                 amount > 0 && (
                   <div className='category-card'>
-                    <h5>{category}</h5>
+                    <h5 key={index}>{category}</h5>
                     <Progress
                       strokeColor={"#ff4545"}
                       percent={((amount / totalExpenseTurnover) * 100).toFixed(

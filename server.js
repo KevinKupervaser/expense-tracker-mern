@@ -7,9 +7,8 @@ const userRoute = require("./routes/usersRoute");
 const transactionRoutes = require("./routes/transactionsRoute");
 require("dotenv").config();
 
-app.use("/api/users/", userRoute);
-app.use("/api/transactions/", transactionRoutes);
-
+app.use("/api/users", userRoute);
+app.use("/api/transactions", transactionRoutes);
 
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static("client/build"));
@@ -21,4 +20,5 @@ if (process.env.NODE_ENV === "production") {
 
 const port = process.env.PORT || 5000;
 
+app.get("/", (req, res) => res.send("hello world"));
 app.listen(port, () => console.log(`Node JS server started at port ${port}`));
