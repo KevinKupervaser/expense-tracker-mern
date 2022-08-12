@@ -16,7 +16,9 @@ app.use("/api/transactions/", transactionRoutes);
 //   res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 // });
 
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
+
+const port = 'https://moneytrackerapp-01.herokuapp.com/login'
 
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static("client/build"));
