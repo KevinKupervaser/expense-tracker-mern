@@ -7,8 +7,8 @@ const userRoute = require("./routes/usersRoute");
 const transactionRoutes = require("./routes/transactionsRoute");
 require("dotenv").config();
 
-app.use("/api/users", userRoute);
-app.use("/api/transactions", transactionRoutes);
+app.use("/api/users/", userRoute);
+app.use("/api/transactions/", transactionRoutes);
 
 
 if (process.env.NODE_ENV === "production") {
